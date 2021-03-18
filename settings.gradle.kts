@@ -11,7 +11,12 @@ gradle.allprojects {
     group = "io.pixeloutlaw"
 
     repositories {
-        jcenter()
+        mavenCentral()
+        jcenter {
+            content {
+                includeModule("org.jetbrains.kotlinx", "kotlinx-html-jvm")
+            }
+        }
     }
 }
 
