@@ -1,22 +1,13 @@
-import de.fayard.refreshVersions.bootstrapRefreshVersions
-
-buildscript {
-    repositories { gradlePluginPortal() }
-    dependencies.classpath("de.fayard.refreshVersions:refreshVersions:0.9.7")
+plugins {
+    // See https://jmfayard.github.io/refreshVersions
+    id("de.fayard.refreshVersions") version "0.10.0"
 }
-
-bootstrapRefreshVersions()
 
 gradle.allprojects {
     group = "io.pixeloutlaw"
 
     repositories {
         mavenCentral()
-        jcenter {
-            content {
-                includeModule("org.jetbrains.kotlinx", "kotlinx-html-jvm")
-            }
-        }
     }
 }
 
