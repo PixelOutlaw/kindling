@@ -1,0 +1,55 @@
+public final class io/pixeloutlaw/kindling/Log {
+	public static final field INSTANCE Lio/pixeloutlaw/kindling/Log;
+	public final fun addLogger (Lio/pixeloutlaw/kindling/Logger;)V
+	public final fun assert (Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;)V
+	public static synthetic fun assert$default (Lio/pixeloutlaw/kindling/Log;Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;ILjava/lang/Object;)V
+	public final fun clearLoggers ()V
+	public final fun debug (Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;)V
+	public static synthetic fun debug$default (Lio/pixeloutlaw/kindling/Log;Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;ILjava/lang/Object;)V
+	public final fun error (Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;)V
+	public static synthetic fun error$default (Lio/pixeloutlaw/kindling/Log;Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;ILjava/lang/Object;)V
+	public final fun info (Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;)V
+	public static synthetic fun info$default (Lio/pixeloutlaw/kindling/Log;Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;ILjava/lang/Object;)V
+	public final fun verbose (Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;)V
+	public static synthetic fun verbose$default (Lio/pixeloutlaw/kindling/Log;Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;ILjava/lang/Object;)V
+	public final fun warn (Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;)V
+	public static synthetic fun warn$default (Lio/pixeloutlaw/kindling/Log;Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;ILjava/lang/Object;)V
+}
+
+public final class io/pixeloutlaw/kindling/Log$Level : java/lang/Enum {
+	public static final field ASSERT Lio/pixeloutlaw/kindling/Log$Level;
+	public static final field DEBUG Lio/pixeloutlaw/kindling/Log$Level;
+	public static final field ERROR Lio/pixeloutlaw/kindling/Log$Level;
+	public static final field INFO Lio/pixeloutlaw/kindling/Log$Level;
+	public static final field VERBOSE Lio/pixeloutlaw/kindling/Log$Level;
+	public static final field WARNING Lio/pixeloutlaw/kindling/Log$Level;
+	public static fun valueOf (Ljava/lang/String;)Lio/pixeloutlaw/kindling/Log$Level;
+	public static fun values ()[Lio/pixeloutlaw/kindling/Log$Level;
+}
+
+public final class io/pixeloutlaw/kindling/LogRecord {
+	public fun <init> (Lio/pixeloutlaw/kindling/Log$Level;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+	public synthetic fun <init> (Lio/pixeloutlaw/kindling/Log$Level;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Lio/pixeloutlaw/kindling/Log$Level;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4 ()Ljava/lang/Throwable;
+	public final fun copy (Lio/pixeloutlaw/kindling/Log$Level;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)Lio/pixeloutlaw/kindling/LogRecord;
+	public static synthetic fun copy$default (Lio/pixeloutlaw/kindling/LogRecord;Lio/pixeloutlaw/kindling/Log$Level;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;ILjava/lang/Object;)Lio/pixeloutlaw/kindling/LogRecord;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getLevel ()Lio/pixeloutlaw/kindling/Log$Level;
+	public final fun getMessage ()Ljava/lang/String;
+	public final fun getTag ()Ljava/lang/String;
+	public final fun getThrowable ()Ljava/lang/Throwable;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public abstract class io/pixeloutlaw/kindling/Logger {
+	public fun <init> ()V
+	protected abstract fun getMinimumLogLevel ()Lio/pixeloutlaw/kindling/Log$Level;
+	public final fun log (Lio/pixeloutlaw/kindling/Log$Level;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+	public static synthetic fun log$default (Lio/pixeloutlaw/kindling/Logger;Lio/pixeloutlaw/kindling/Log$Level;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;ILjava/lang/Object;)V
+	protected abstract fun print (Lio/pixeloutlaw/kindling/LogRecord;)V
+}
+
